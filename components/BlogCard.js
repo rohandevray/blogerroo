@@ -5,7 +5,6 @@ import Image from "next/image";
 function BlogPost({ title, author, coverPhoto, datePublished, slug }) {
   return (
     <div className={styles.card}>
-      <h1 className={styles.header}>Blog Posts</h1>
       <Link href={`/posts/${slug}`}>
         <div className={styles.imgContainer}>
           <img src={coverPhoto.url} alt="xyzz" />
