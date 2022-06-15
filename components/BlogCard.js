@@ -5,11 +5,24 @@ import Image from "next/image";
 function BlogPost({ title, author, coverPhoto, datePublished, slug }) {
   return (
     <div className={styles.card}>
+      <h1 className={styles.header}>Blog Posts</h1>
       <Link href={`/posts/${slug}`}>
         <div className={styles.imgContainer}>
           <img src={coverPhoto.url} alt="xyzz" />
         </div>
       </Link>
+      <div className={styles.text}>
+        <h1>{title}</h1>
+        <div className={styles.details}>
+          <div className={styles.author}>
+            <img src={author.avator.url} alt="" />
+            <h3>{author.name}</h3>
+          </div>
+          <div className={styles.date}>
+            <h3>{datePublished}</h3>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
